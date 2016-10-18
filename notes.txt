@@ -1,0 +1,17 @@
+(possibly link with a creation tool, which would be online, at least for now)
+FUNCTIONS
+
+read through questions
+  -need text to speech
+  -need to integrate with some command words
+  
+listen to resposnes
+  -need speech to text
+  -need to filter out command words for above
+
+local handle responses
+  -write responses to local, using cookies or cache
+  
+local->web
+  -try to connect and post all local forms not marked written, then mark them written
+  -maybe checksum?
