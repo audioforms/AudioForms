@@ -1,5 +1,5 @@
 /* stolen from pure */
-#side_menu {
+#menu {
     margin-left: -160px; /* "#menu" width */
     width: 160px;
     position: fixed;
@@ -11,31 +11,31 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
-    #side_menu a {
+    #menu a {
         color: #999;
         border: none;
         white-space: normal;
         padding: 0.625em 1em;
     }
 
-    #side_menu .pure-menu-open {
+    #menu .pure-menu-open {
         background: transparent;
         border: 0;
     }
 
-    #side_menu .pure-menu ul {
+    #menu .pure-menu ul {
         border: none;
         background: transparent;
         display: block;
     }
 
-    #side_menu .pure-menu ul,
-    #side_menu .pure-menu .menu-item-divided {
+    #menu .pure-menu ul,
+    #menu .pure-menu .menu-item-divided {
         border-top: 1px solid #333;
     }
 
-        #side_menu .pure-menu li a:hover,
-        #side_menu .pure-menu li a:focus {
+        #menu .pure-menu li a:hover,
+        #menu .pure-menu li a:focus {
             background: #333;
         }
 
@@ -108,7 +108,7 @@
                         transform: rotate(-45deg) translate(.4em, -.3em);
             }
 
-    #side_menu .pure-menu-heading {
+    #menu .pure-menu-heading {
         font-size: 125%;
         font-weight: 300;
         letter-spacing: 0.1em;
@@ -117,20 +117,20 @@
         padding: 0.5em 0.8em;
         text-transform: uppercase;
     }
-    #side_menu .pure-menu-heading:hover,
-    #side_menu .pure-menu-heading:focus {
+    #menu .pure-menu-heading:hover,
+    #menu .pure-menu-heading:focus {
         color: #999;
     }
 
-    #side_menu .pure-menu-selected {
+    #menu .pure-menu-selected {
         background: #1f8dd6;
     }
 
-        #side_menu .pure-menu-selected a {
+        #menu .pure-menu-selected a {
             color: #fff;
         }
 
-        #side_menu li.pure-menu-selected a:hover,
-        #side_menu li.pure-menu-selected a:focus {
+        #menu li.pure-menu-selected a:hover,
+        #menu li.pure-menu-selected a:focus {
             background: none;
         }
