@@ -1,2 +1,2 @@
-# AudioForms
-An offline/online browser application for using audioforms
+# FormsAudio
+An offline/online browser application for using forms.audio
