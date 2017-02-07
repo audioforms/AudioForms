@@ -20,14 +20,14 @@ class Listener {
         this.annyang = annyang;
     }
 
-    function greeting() {
+    greeting() {
         /**
          * a basic greeting for testing
          */
         alert('Hello!');
     }
 
-    function init() {
+    init() {
         /**
          * Set up annd initalize listen engine
          */
@@ -43,7 +43,7 @@ class Listener {
         this.annyang.pause();
     }
 
-    function listen(timeout = 10000) {
+    listen(timeout = 10000) {
         /**
          * keep listening on a button or key press
          * @param {int} [timeout] - the amount of time to wait before pausing.
