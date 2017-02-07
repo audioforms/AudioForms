@@ -3,53 +3,58 @@
  *  @author birm@rbirm.us (Ryan Birmingham)
  *  @license Copyright 2017 Ryan Birmingham.
  */
-
 /** Need to add these to any document
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>
 */
-
-
 /**
  *A FormsAudio Listener
+ * @constructor
+ * @param {Object.<string, function>} commands - commands to run when key is matched.
+ * @param {Object[]} [callbacks] - functions to call backk on a match
  */
-class Listener{
-    constructor(){
-        Empty
+class Listener {
+    constructor(commands, callbacks = []) {
+        this.commands = commands;
+        this.callbacks = callbacks;
+        this.annyang = annyang;
     }
 
-    function greeting(){
+    function greeting() {
         /**
-        * a basic greeting for testing
-        */
+         * a basic greeting for testing
+         */
         alert('Hello!');
     }
 
-    function intialize_listen(){
+    function init() {
         /**
          * Set up annd initalize listen engine
          */
-        var commands = {
-        'hello': function() { greeting(); }
+        var greeting = {
+            'hello': function() {
+                greeting();
+            }
         };
-        annyang.addCommands(commands);
+        this.annyang.addCommands(greeting);
+        this.annyang.addCommands(this.commands);
         // start than pause listener
-        annyang.start();
-        annyang.pause();
+        this.annyang.start();
+        this.annyang.pause();
     }
 
-    function listen(timeout=10000){
+    function listen(timeout = 10000) {
         /**
          * keep listening on a button or key press
          * @param {int} [timeout] - the amount of time to wait before pausing.
          */
-        if (!(annyang.isListening())){
+        if (!(this.annyang.isListening())) {
             // resume listening
-            annyang.resume();
-            // async wait for 10 seconds default (TODO tune this time)
-            setTimeout(wait,timeout);
+            this.annyang.resume();
+            // async wait until pause
+            setTimeout(wait, timeout);
             // stop lisening
-            annyang.pause();
+            this.annyang.pause();
         }
     }
 }
