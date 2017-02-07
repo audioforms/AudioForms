@@ -12,7 +12,7 @@
  * @param {String} [language] - language to use
  */
 class Talker {
-    constructor(language="en") {
+    constructor(language = "en") {
         this.language = language;
         this.tts = new GoogleTTS(language)
     }
@@ -20,7 +20,7 @@ class Talker {
     /**
      *Intialize the talker
      */
-    init(){
+    init() {
         Empty
     }
 
@@ -28,6 +28,6 @@ class Talker {
      * Say text given.
      * @param {String} [tosay] - something to say
      */
-    say(tosay="Nothing"){
+    say(tosay = "Nothing") {
         this.tts.play(tosay)
     }
