@@ -11,10 +11,23 @@ function home(){
     'hello': hello,
     'hi': hello,
     'help':
-    'load *form': loadForm,
-    'open *form': loadForm,
-    'read *response': loadResp
+    'load :type *name': load,
+    'open :type *name': load,
+    'read :type *response': load
   };
+}
+
+function load(type, name){
+  if (type=="form"){
+    loadForm(name)
+  }
+  else if (type=="response") {
+    loadResp(name)
+  }
+  else {
+    var say = "load command type not recognized; say load form or load response, followed by a form or reponse name.";
+    home()
+  }
 }
 
 function loadForm(name){
@@ -26,6 +39,7 @@ function loadForm(name){
     'repeat' : questionRepeat
     'back' : questionBack,
     'about' : formAbout,
+    'next' : questionNext,
     'skip' : questionSkip,
     'home now' : home
   };
@@ -49,9 +63,11 @@ function loadResp(name){
 function hello(){
   // just say hi
   var say = "Hello!"
+  home();
 }
 
 function help(){
   // just say the help message
   var say = "We'll help you, just not this early in alpha. Talk to birm."
+  home();
 }
