@@ -17,12 +17,24 @@ function home(){
   };
 }
 
+function getForm(name){
+  // query for form by name with appropriate privs (faudapi)
+  // if more than one, find one by this author
+  // return id
+}
+
+function getResp(name){
+  // query for response by name with appropriate privs (faudapi)
+  // if more than one, find one by this author
+  // return id
+}
+
 function load(type, name){
   if (type=="form"){
-    loadForm(name)
+    loadForm(getForm(name))
   }
   else if (type=="response") {
-    loadResp(name)
+    loadResp(getResp(name))
   }
   else {
     var say = "load command type not recognized; say load form or load response, followed by a form or reponse name.";
