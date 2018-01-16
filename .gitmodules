@@ -1,0 +1,3 @@
+[submodule "FALAFEL"]
+	path = FALAFEL
+	url = https://github.com/formsaudio/FALAFEL.git
