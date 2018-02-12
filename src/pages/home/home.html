@@ -11,18 +11,18 @@
     <ion-grid>
         <ion-row>
             <ion-img width="80" height="80" src="assets/imgs/logo.png"></ion-img>
-            <button ion-button round block>Button</button>
+            <button ion-button round block (click)="startFa();">Button</button>
         </ion-row>
         <ion-row>
             <div class="display_window">
-                Last Word
-                {{WORD}}
+                State
+                {{getFaStatus().STATE}}
             </div>
         </ion-row>
         <ion-row>
             <div class="display_window">
                 Stack
-                {{STACK}}
+                {{getFaStatus().STACK.toString()}}
             </div>
         </ion-row>
     </ion-grid>

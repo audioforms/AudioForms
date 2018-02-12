@@ -1,4 +1,3 @@
-import * as FALAFEL from '../../assets/js/FALAFEL'
 
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -10,7 +9,10 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
   constructor(public navCtrl: NavController) {
-      alert(CONTINUE);
+      // grab stuff from formsaudio
+      // TODO not dual binding this???
+      this.getFaStatus = getFaStatus;
+      this.startFa = run;
   }
 
 }

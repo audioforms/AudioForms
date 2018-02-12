@@ -182,3 +182,9 @@ function run() {
     speak("listening");
     recognition.onresult = (e) => on_word_get(e.results[0][0].transcript);
 }
+
+function getFaStatus(){
+    return {
+        STACK: STACK, STATE: STATE
+    }
+}
