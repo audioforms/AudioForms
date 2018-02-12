@@ -8,11 +8,11 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public getFaStatus, public run) {
       // grab stuff from formsaudio
       // TODO not dual binding this???
       this.getFaStatus = getFaStatus;
-      this.startFa = run;
+      this.run = run;
   }
 
 }
